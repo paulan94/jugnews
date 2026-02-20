@@ -1,12 +1,33 @@
 import json
+import os
 import nltk
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from app.scraper import scrape_sources_for_category
 from app.summarizer import summarize_text, build_insights
 
 app = FastAPI(title="JugNews")
+
+default_origins = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+    "https://paulan94.github.io",
+]
+cors_origins = [
+    origin.strip()
+    for origin in os.getenv("JUGNEWS_CORS_ORIGINS", ",".join(default_origins)).split(",")
+    if origin.strip()
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=cors_origins,
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 try:
     nltk.data.find('tokenizers/punkt')

@@ -49,7 +49,7 @@ Open `http://127.0.0.1:8000`.
 
 GitHub Pages can host the static UI in `static/`, but it cannot run the FastAPI backend.
 
-This repo includes `.github/workflows/deploy-pages.yml`, which deploys `static/` to Pages on pushes to `main`.
+This repo includes `.github/workflows/deploy-pages.yml`, which deploys `static/` to Pages on pushes to `master`.
 
 After pushing:
 
@@ -64,6 +64,19 @@ window.JUGNEWS_API_BASE = "https://your-api.example.com";
 ```
 
 If `JUGNEWS_API_BASE` is empty, the UI uses the same origin (works for local FastAPI serving).
+
+### Backend deployment checklist
+
+1. Deploy the FastAPI app (`app.main:app`) to a Python host (Render, Railway, Fly.io, etc.).
+2. Set env var `JUGNEWS_CORS_ORIGINS` on the backend:
+   - `https://paulan94.github.io,http://127.0.0.1:8000,http://localhost:8000`
+3. Update `static/config.js` with your backend URL:
+
+```js
+window.JUGNEWS_API_BASE = "https://your-backend-host.example.com";
+```
+
+4. Commit + push so GitHub Pages publishes the updated frontend config.
 
 ## Notes on social/professional platforms
 
