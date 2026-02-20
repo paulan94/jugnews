@@ -1,0 +1,77 @@
+{
+  "finance": [
+    {
+      "name": "Reuters Business",
+      "type": "rss",
+      "url": "https://feeds.reuters.com/reuters/businessNews"
+    },
+    {
+      "name": "CNBC Finance",
+      "type": "rss",
+      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html"
+    },
+    {
+      "name": "Yahoo Finance",
+      "type": "rss",
+      "url": "https://finance.yahoo.com/news/rssindex"
+    }
+  ],
+  "world": [
+    {
+      "name": "Reuters World",
+      "type": "rss",
+      "url": "https://feeds.reuters.com/Reuters/worldNews"
+    },
+    {
+      "name": "Associated Press",
+      "type": "rss",
+      "url": "https://news.google.com/rss/search?q=associated+press+world&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "BBC World",
+      "type": "rss",
+      "url": "http://feeds.bbci.co.uk/news/world/rss.xml"
+    }
+  ],
+  "epstein-files": [
+    {
+      "name": "Reuters Search",
+      "type": "rss",
+      "url": "https://news.google.com/rss/search?q=epstein&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "AP Search",
+      "type": "rss",
+      "url": "https://news.google.com/rss/search?q=jeffrey+epstein+court+documents&hl=en-US&gl=US&ceid=US:en"
+    }
+  ],
+  "aliens": [
+    {
+      "name": "NASA News",
+      "type": "rss",
+      "url": "https://www.nasa.gov/news-release/feed/"
+    },
+    {
+      "name": "UAP Coverage",
+      "type": "rss",
+      "url": "https://news.google.com/rss/search?q=UAP+OR+UFO+Pentagon&hl=en-US&gl=US&ceid=US:en"
+    }
+  ],
+  "social-professional": [
+    {
+      "name": "LinkedIn",
+      "type": "social_stub",
+      "url": "https://www.linkedin.com/"
+    },
+    {
+      "name": "Facebook",
+      "type": "social_stub",
+      "url": "https://www.facebook.com/"
+    },
+    {
+      "name": "Instagram",
+      "type": "social_stub",
+      "url": "https://www.instagram.com/"
+    }
+  ]
+}
